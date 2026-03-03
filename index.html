@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juanita Boyer – Tax summary</title>
+    <style>
+        /* simple, clean, "normal document" style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #d6d9de;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            padding: 20px;
+        }
+        .paper {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 2.5rem 2.8rem;
+            border-radius: 4px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 500;
+            color: #1e3a5f;
+            border-bottom: 2px solid #bbd0e4;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.2px;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #2c3e50;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .info-grid {
+            background: #f5f7fa;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 6px solid #2b5797;
+        }
+
+        .info-grid p {
+            margin: 0.4rem 0;
+            font-size: 1.05rem;
+        }
+
+        .info-grid strong {
+            font-weight: 600;
+            color: #1e3a5f;
+            min-width: 140px;
+            display: inline-block;
+        }
+
+        .amount-highlight {
+            background: #eef3fc;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.8rem 0;
+            font-size: 1.2rem;
+            border: 1px solid #aac2d9;
+        }
+
+        .amount-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed #b3c9e0;
+            padding: 0.8rem 0;
+        }
+
+        .amount-row:last-child {
+            border-bottom: none;
+        }
+
+        .amount-label {
+            font-weight: 500;
+        }
+
+        .amount-number {
+            font-family: 'Courier New', monospace;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0a2f44;
+        }
+
+        .due-now {
+            background: #e1e9f3;
+            border-radius: 8px;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 1.5rem;
+            border: 1px solid #2b5797;
+        }
+
+        .due-now .big-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #b22222;
+            font-family: 'Courier New', monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th {
+            text-align: left;
+            background: #e6edf6;
+            padding: 0.5rem 0.8rem;
+            font-weight: 600;
+            border: 1px solid #9bb7d4;
+        }
+
+        td {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid #bcccdb;
+        }
+
+        .right {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            font-size: 0.9rem;
+            color: #3b5f7a;
+            border-top: 1px solid #cfdbe8;
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        .print-button {
+            background: white;
+            border: 2px solid #2c3e50;
+            padding: 0.5rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-top: 1.8rem;
+            transition: 0.2s;
+        }
+
+        .print-button:hover {
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="paper">
+    <h1>⚖ Estate tax summary – Juanita Boyer</h1>
+    <div class="subhead">
+        <span>Prepared for: Estate representative</span>
+        <span>Date: March 2, 2026</span>
+    </div>
+
+    <!-- BASIC INFO -->
+    <div class="info-grid">
+        <p><strong>Deceased:</strong> Juanita Boyer</p>
+        <p><strong>Business funds held by IRS:</strong> $245,000.00 (frozen – business bank account)</p>
+        <p><strong>IRS lien / tax issue:</strong> Unpaid self‑employment & income tax (business)</p>
+        <p><strong>Status:</strong> Awaiting final tax certification; amount due calculated below</p>
+    </div>
+
+    <!-- SHORT EXPLANATION (realistic, normal) -->
+    <p style="margin-bottom:1rem;">Based on the business income reported and the self‑employment status of Ms. Boyer, the Internal Revenue Service has asserted the following tax liability. After applying estate adjustments, the current amount required to release the funds is <strong>$68,000</strong>. Below is a breakdown.</p>
+
+    <!-- SIMPLE TAX TABLE -->
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th class="right">Amount (USD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total business income (frozen account)</td>
+                <td class="right">$245,000.00</td>
+            </tr>
+            <tr>
+                <td>Self‑employment tax (15.3%)</td>
+                <td class="right">$37,485.00</td>
+            </tr>
+            <tr>
+                <td>Federal income tax (estimated 24%)</td>
+                <td class="right">$58,800.00</td>
+            </tr>
+            <tr>
+                <td>Penalties & interest (approx.)</td>
+                <td class="right">$6,715.00</td>
+            </tr>
+            <tr>
+                <td style="font-weight:600;">Subtotal liability</td>
+                <td class="right" style="font-weight:600;">$103,000.00</td>
+            </tr>
+            <tr>
+                <td>Less: estate/attorney adjustment (abatement)</td>
+                <td class="right">($35,000.00)</td>
+            </tr>
+            <tr style="background:#f0f3f8; font-weight:700;">
+                <td>NET TAX DUE (must be paid to release lien)</td>
+                <td class="right" style="color:#b22222; font-size:1.2rem;">$68,000.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- explanation block (normal, not too fancy) -->
+    <div style="background:#f9fbfd; border-left:6px solid #1e5f8e; padding:1rem 1.8rem; margin:2rem 0;">
+        <p style="margin-bottom:0.4rem;"><strong>⏺ After payment of $68,000.00, the IRS will release the lien.</strong></p>
+        <p>The remaining balance of the business funds – approximately <strong>$177,000</strong> – will be transferred to the estate. Those funds can then be used for the shop, rent arrears, or other purposes in accordance with the will.</p>
+        <p style="margin-top:0.6rem;">✽ No SSI survivor benefits (self‑employed). ✽ Shop rental issue handled separately.</p>
+    </div>
+
+    <!-- key numbers summary block -->
+    <div class="amount-highlight">
+        <div class="amount-row">
+            <span class="amount-label">Original frozen amount</span>
+            <span class="amount-number">$245,000.00</span>
+        </div>
+        <div class="amount-row">
+            <span class="amount-label">IRS tax obligation (final)</span>
+            <span class="amount-number" style="color:#b22222;">$68,000.00</span>
+        </div>
+        <div class="amount-row">
+            <span class="amount-label">Remaining to estate</span>
+            <span class="amount-number">$177,000.00</span>
+        </div>
+    </div>
+
+    <!-- due now callout (very normal but clear) -->
+    <div class="due-now">
+        <p style="font-weight:500; font-size:1.1rem; margin-bottom:0.3rem;">⏳ Immediate attention</p>
+        <p style="font-size:1rem;">The IRS requires payment of</p>
+        <p class="big-number">$68,000.00</p>
+        <p style="margin-top:0.5rem;">to remove the hold on Juanita Boyer's business account. Once cleared, the remaining funds ($177k) become available for the shop, legal fees, and living expenses.</p>
+    </div>
+
+    <!-- additional context (brief, matches conversation) -->
+    <p style="margin:1.2rem 0 0.8rem;"><strong>Notes from family lawyer:</strong></p>
+    <ul style="padding-left:2rem; color:#2c3e50;">
+        <li>IRS has not yet formally disclosed the exact breakdown – this is a reasonable estimate using standard self‑employment rates.</li>
+        <li>The tax must be satisfied before any shop reopening.</li>
+        <li>No survivor benefits because decedent was self‑employed (did not pay into SSI).</li>
+        <li>The shop rental issue is separate but will be addressed with released funds.</li>
+    </ul>
+
+    <!-- footer for reference -->
+    <div class="footer-note">
+        Juanita Boyer estate documentation – unofficial worksheet for representative use<br>
+        Prepared with information from family lawyer. Final numbers subject to IRS official determination.
+    </div>
+
+    <!-- simple print / pdf button -->
+    <div style="display: flex; justify-content: center;">
+        <button class="print-button" onclick="window.print()">🖨️ Print or save PDF (normal document)</button>
+    </div>
+    <p style="text-align:center; font-size:0.8rem; color:#4a5f73; margin-top:0.5rem;">Use "Save as PDF" in your print dialog.</p>
+</div>
+
+</body>
+</html>
